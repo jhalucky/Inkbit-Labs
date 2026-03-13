@@ -16,7 +16,7 @@ export function useReveal(className = "visible", threshold = 0.12) {
             // Stagger siblings
             const parent = entry.target.parentElement;
             if (parent) {
-              const siblings = [...parent.querySelectorAll("[data-reveal]")];
+              const siblings = Array.from(parent.querySelectorAll("[data-reveal]"));
               const idx = siblings.indexOf(entry.target as Element);
               (entry.target as HTMLElement).style.transitionDelay = `${idx * 80}ms`;
             }

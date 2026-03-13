@@ -32,7 +32,7 @@ export default function Hero() {
           <div className="flex items-center gap-2 mb-6">
             <span className="w-6 h-px bg-accent" />
             <span className="text-[0.7rem] font-medium tracking-[0.2em] uppercase text-accent">
-              Est. 2024 · Premium Print Studio
+              Est. 2022 · Premium Print Studio
             </span>
           </div>
 

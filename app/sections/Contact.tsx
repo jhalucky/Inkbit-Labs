@@ -13,10 +13,16 @@ interface StatusState {
   message: string;
 }
 
-const contactInfo = [
-  { label: "inkbitlabs@gmail.com" },
-  { label: "+91-8076392558" },
-  { label: "Mon–Fri, 9am – 6pm EST" },
+interface ContactInfoItem {
+  label: string;
+  type?: "email" | "phone" | "text";
+  href?: string;
+}
+
+const contactInfo: ContactInfoItem[] = [
+  { label: "inkbitlabs@gmail.com", type: "email", href: "mailto:inkbitlabs@gmail.com?subject=Printing%20Inquiry&body=Hi%20Inkbit%20Labs,%20I%20would%20like%20to%20ask%20about..." },
+  { label: "+91-8076392558", type: "phone", href: "tel:+918076392558" },
+  { label: "Mon–Fri, 9am – 6pm EST", type: "text" },
 ];
 
 export default function Contact() {
@@ -89,7 +95,13 @@ export default function Contact() {
               {contactInfo.map((item) => (
                 <div key={item.label} className="flex items-center gap-3 text-[0.9rem] text-gray-ink-400">
                   <span className="text-accent text-[0.65rem]">◉</span>
-                  <span>{item.label}</span>
+                  {(item.type === "email" || item.type === "phone") ? (
+                    <a href={item.href} className="hover:text-accent transition-colors">
+                      {item.label}
+                    </a>
+                  ) : (
+                    <span>{item.label}</span>
+                  )}
                 </div>
               ))}
             </div>

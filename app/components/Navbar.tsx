@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Logo from "./Logo";
 
 const navLinks = [
   { label: "Home", href: "#home" },
@@ -39,7 +40,7 @@ export default function Navbar() {
           onClick={() => scrollTo("#home")}
           className="font-display text-2xl font-medium text-ink flex items-center gap-1.5 tracking-wide flex-shrink-0"
         >
-          <span className="text-accent text-base">✦</span>
+          <Logo className="w-6 h-6 text-accent rounded-full" size={34}/>
           Inkbit Labs
         </button>
 

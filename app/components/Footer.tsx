@@ -1,4 +1,5 @@
 "use client";
+import Logo from "./Logo";
 
 const links = ["Home", "About", "Services", "Contact"];
 
@@ -14,7 +15,8 @@ export default function Footer() {
           {/* Brand */}
           <div>
             <div className="font-display text-[1.4rem] font-medium text-parchment flex items-center gap-2">
-              <span className="text-accent">✦</span> Inkbit Labs
+              <Logo className="w-6 h-6 text-accent rounded-full" size={34} />
+              Inkbit Labs
             </div>
             <p className="text-[0.85rem] text-gray-ink-600 font-light mt-1.5">
               Premium printing for brands that mean business.

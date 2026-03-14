@@ -14,8 +14,8 @@ interface StatusState {
 }
 
 const contactInfo = [
-  { label: "hello@inkbitlabs.com" },
-  { label: "+1 (555) 010-2040" },
+  { label: "inkbitlabs@gmail.com" },
+  { label: "+91-8076392558" },
   { label: "Mon–Fri, 9am – 6pm EST" },
 ];
 

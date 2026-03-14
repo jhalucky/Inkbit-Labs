@@ -9,12 +9,12 @@ export default function Footer() {
   };
 
   return (
-    <footer className="bg-ink border-t border-white/5 pt-12 pb-8">
+    <footer className="bg-white border-t border-white/5 pt-12 pb-8">
       <div className="max-w-[1200px] mx-auto px-8">
         <div className="flex flex-wrap justify-between items-start gap-8 mb-8">
           {/* Brand */}
           <div>
-            <div className="font-display text-[1.4rem] font-medium text-parchment flex items-center gap-2">
+            <div className="font-display text-[1.4rem] font-medium text-black flex items-center gap-2">
               <Logo className="w-6 h-6 text-accent rounded-full" size={34} />
               Inkbit Labs
             </div>
